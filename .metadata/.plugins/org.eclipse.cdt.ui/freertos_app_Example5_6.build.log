@@ -1,0 +1,17 @@
+21:23:26 **** Incremental Build of configuration Debug for project freertos_app_Example5_6 ****
+make -j16 all 
+arm-none-eabi-gcc "../App/Src/task_Led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I"C:/Users/ipave/Documentos/GitHub/RTOSI/freertos_app_Example5_6/Supporting_Functions/Inc" -I"C:/Users/ipave/Documentos/GitHub/RTOSI/freertos_app_Example5_6/App/Inc" -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/Src/task_Led.d" -MT"App/Src/task_Led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/Src/task_Led.o"
+arm-none-eabi-gcc -o "freertos_app_Example5_6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ipave\Documentos\GitHub\RTOSI\freertos_app_Example5_6\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="freertos_app_Example5_6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: freertos_app_Example5_6.elf
+ 
+arm-none-eabi-size   freertos_app_Example5_6.elf 
+arm-none-eabi-objdump -h -S  freertos_app_Example5_6.elf  > "freertos_app_Example5_6.list"
+   text	   data	    bss	    dec	    hex	filename
+  29184	    184	  19296	  48664	   be18	freertos_app_Example5_6.elf
+Finished building: default.size.stdout
+ 
+Finished building: freertos_app_Example5_6.list
+ 
+
+21:23:27 Build Finished. 0 errors, 0 warnings. (took 723ms)
+
